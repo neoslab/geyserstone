@@ -1,5 +1,8 @@
 # GeyserStone - Solana gRPC Plugin for Real-Time Transaction Filtering 
 
+![Rust Version](https://img.shields.io/badge/rust-1.8.4%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 This repo contains a fully functional gRPC interface for Solana. It is built around Solana's Geyser interface. In this repo we have the plugin as well as sample clients for multiple languages.
 
 It provides the ability to get slots, blocks, transactions, and account update notifications over a standardised path.
@@ -135,12 +138,26 @@ It's possible to add limits for filters in the config. If `filters` field is omi
 
 * * *
 
-## License
+## Contributing
 
-This script is open source under the [MIT License](LICENSE).
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes and commit them (`git commit -m "Add your feature"`).
+4. Push to your branch (`git push origin feature/your-feature`).
+5. Open a pull request with a clear description of your changes.
+
+Ensure your code follows PEP 8 style guidelines and includes appropriate tests.
 
 * * *
 
-### Contact
+## License
 
-Created by [@neoslab](https://neoslab.com/contact/) – Feel free to reach out!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+* * *
+
+## Contact
+
+For issues, suggestions, or questions, please open an issue on GitHub or contact the maintainer at [GitHub Issues](https://github.com/neoslab/geyserstone/issues).
