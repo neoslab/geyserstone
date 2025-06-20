@@ -1,4 +1,4 @@
-# GeyserStone - Solana gRPC Plugin for Real-Time Transaction Filtering 
+# GeyserStone - Solana gRPC Plugin 
 
 ![Rust Version](https://img.shields.io/badge/rust-1.8.4%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -9,13 +9,13 @@ It provides the ability to get slots, blocks, transactions, and account update n
 
 * * *
 
-### Known bugs
+## Known bugs
 
 Block reconstruction inside gRPC plugin based on information provided by BlockMeta, unfortunately number of entries for blocks generated on validators always equal to zero. These blocks always will have zero entries. See issue on GitHub: https://github.com/solana-labs/solana/issues/33823
 
 * * *
 
-### Validator
+## Validator
 
 ```bash
 $ solana-validator --geyser-plugin-config yellowstone-grpc-geyser/config.json
@@ -39,13 +39,13 @@ Please check [yellowstone-grpc-proto/proto/geyser.proto](yellowstone-grpc-proto/
 
 * * *
 
-#### Slots
+### Slots
 
 - `filter_by_commitment` — by default slots sent for all commitment levels, but with this filter you can receive only selected commitment level
 
 * * *
 
-#### Account
+### Account
 
 Accounts can be filtered by:
 
@@ -57,7 +57,7 @@ If all fields are empty then all accounts are broadcasted. Otherwise fields work
 
 * * *
 
-#### Transactions
+### Transactions
 
 - `vote` — enable/disable broadcast `vote` transactions
 - `failed` — enable/disable broadcast `failed` transactions
@@ -70,13 +70,13 @@ If all fields are empty then all transactions are broadcasted. Otherwise fields 
 
 * * *
 
-#### Entries
+### Entries
 
 Currently we do not have filters for the entries, all entries broadcasted.
 
 * * *
 
-#### Blocks
+### Blocks
 
 - `account_include` — filter transactions and accounts that use any account from the list
 - `include_transactions` — include all transactions
@@ -85,7 +85,7 @@ Currently we do not have filters for the entries, all entries broadcasted.
 
 * * *
 
-#### Blocks meta
+### Blocks meta
 
 Same as `Blocks` but without `transactions`, `accounts` and entries. Currently we do not have filters for block meta, all messages are broadcasted.
 
