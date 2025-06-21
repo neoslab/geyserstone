@@ -1,0 +1,32 @@
+{
+    "libpath": "[[FULLPATH]]/plugins/geyser/libgeysersocket.so",
+    "log": { 
+        "level": "debug" 
+    },
+    "grpc": {
+        "address": "0.0.0.0:10000",
+        "filters": {
+            "accounts": { 
+                "max": 10000 
+            },
+            "slots": { 
+                "max": 10000 
+            },
+            "transactions": { 
+                "max": 10000 
+            }
+        },
+        "compression": {
+            "accept": ["gzip", "zstd"],
+            "send": ["gzip", "zstd"]
+        },
+        "x_token": "[[XTOKEN]]"
+    },
+    "prometheus": {
+        "address": "0.0.0.0:9090" 
+    },
+    "tokio": { 
+        "worker_threads": 32,
+        "affinity": "0-31" 
+    }
+}
