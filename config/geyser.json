@@ -1,5 +1,5 @@
 {
-    "libpath": "[[FULLPATH]]/libgeysersocket.so",
+    "libpath": "[[FULLPATH]]",
     "log": { 
         "level": "debug" 
     },
