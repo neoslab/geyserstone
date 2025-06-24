@@ -1,32 +1,27 @@
 {
     "libpath": "[[FULLPATH]]",
-    "log": { 
-        "level": "debug" 
+    "log": {
+        "level": "debug"
     },
     "grpc": {
         "address": "0.0.0.0:10000",
-        "filters": {
-            "accounts": { 
-                "max": 10000 
-            },
-            "slots": { 
-                "max": 10000 
-            },
-            "transactions": { 
-                "max": 10000 
-            }
-        },
         "compression": {
-            "accept": ["gzip", "zstd"],
-            "send": ["gzip", "zstd"]
+            "accept": [
+                "gzip"
+            ],
+            "send": [
+                "gzip"
+            ]
         },
+        "max_decoding_message_size": "4_194_304",
+        "snapshot_plugin_channel_capacity": null,
+        "snapshot_client_channel_capacity": "50_000_000",
+        "channel_capacity": "100_000",
+        "unary_concurrency_limit": 100,
+        "unary_disabled": false,
         "x_token": "[[XTOKEN]]"
     },
     "prometheus": {
-        "address": "0.0.0.0:9090" 
-    },
-    "tokio": { 
-        "worker_threads": 32,
-        "affinity": "0-31" 
+        "address": "0.0.0.0:9090"
     }
 }
