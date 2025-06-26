@@ -1,34 +1,27 @@
 {
-    "libpath": "[[FULLPATH]]",                                  // Replace with full path to Yellowstone plugin
+    "libpath": "[[FULLPATH]]",
     "log": {
-        "level": "info"                                         // Changed from 'debug' to reduce log noise (use 'debug' only for troubleshooting)
+        "level": "debug"
     },
     "grpc": {
-        "address": "0.0.0.0:10000",                             // Bind to all interfaces (restrict with firewall if needed)
+        "address": "0.0.0.0:10000",
         "compression": {
-            "accept": ["gzip"],                                 // Supports gzip-compressed incoming requests
-            "send": ["gzip"]                                    // Compresses outgoing responses with gzip
+            "accept": [
+                "gzip"
+            ],
+            "send": [
+                "gzip"
+            ]
         },
-        "max_decoding_message_size": 8388608,                   // Increased to 8MB (from 4MB) for larger account updates
-        "snapshot_plugin_channel_capacity": null,               // Let Geyser manage internally
-        "snapshot_client_channel_capacity": 100000000,          // Increased to 100M (handles spikes in snapshot data)
-        "channel_capacity": 1000000,                            // Increased to 1M (from 100K) for high-throughput RPC
-        "unary_concurrency_limit": 500,                         // Increased from 100 (scales for parallel requests)
-        "unary_disabled": false,                                // Keep enabled for unary RPCs
-        "x_token": "[[XTOKEN]]"                                 // Replace with strong auth token
+        "max_decoding_message_size": "8_388_608",
+        "snapshot_plugin_channel_capacity": null,
+        "snapshot_client_channel_capacity": "100_000_000",
+        "channel_capacity": "100_000",
+        "unary_concurrency_limit": 100,
+        "unary_disabled": false,
+        "x_token": "[[XTOKEN]]"
     },
     "prometheus": {
-        "address": "0.0.0.0:9090",                              // Metrics endpoint (use Prometheus to scrape)
-        "timeout_ms": 5000                                      // Added: Timeout for metric collection
-    },
-    "accounts": {
-        "filters": [
-            {
-                "owner": "*",                                   // Track all accounts (adjust to filter specific programs)
-                "is_startup": true                              // Emit account data at startup
-            }
-        ]
-    },
-    "transaction_notifications": true,                          // Enable if you need real-time tx events
-    "block_notifications": true                                 // Enable for block-level data
+        "address": "0.0.0.0:9090"
+    }
 }
