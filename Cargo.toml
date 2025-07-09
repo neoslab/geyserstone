@@ -21,11 +21,11 @@ publish = false
 
 [workspace.dependencies]
 affinity = "0.1.2"
-agave-geyser-plugin-interface = "=2.2.19"
-solana-transaction-status = "=2.2.19"
-solana-account-decoder = "=2.2.19"
-solana-storage-proto = "=2.2.19"
-solana-transaction-context = "=2.2.19"
+agave-geyser-plugin-interface = "=2.2.16"
+solana-transaction-status = "=2.2.16"
+solana-account-decoder = "=2.2.16"
+solana-storage-proto = "=2.2.16"
+solana-transaction-context = "=2.2.16"
 anyhow = "1.0.62"
 backoff = "0.4.0"
 base64 = "0.22.1"
