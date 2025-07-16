@@ -21,11 +21,11 @@ publish = false
 
 [workspace.dependencies]
 affinity = "0.1.2"
-agave-geyser-plugin-interface = "=2.2.16"
-solana-transaction-status = "=2.2.16"
-solana-account-decoder = "=2.2.16"
-solana-storage-proto = "=2.2.16"
-solana-transaction-context = "=2.2.16"
+agave-geyser-plugin-interface = "=2.2.20"
+solana-transaction-status = "=2.2.20"
+solana-account-decoder = "=2.2.20"
+solana-storage-proto = "=2.2.20"
+solana-transaction-context = "=2.2.20"
 anyhow = "1.0.62"
 backoff = "0.4.0"
 base64 = "0.22.1"
@@ -94,8 +94,8 @@ lto = true
 codegen-units = 1
 
 [patch.crates-io]
-agave-geyser-plugin-interface = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.16-triton-public" }
-solana-account-decoder = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.16-triton-public" }
-solana-storage-proto = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.16-triton-public" }
-solana-transaction-status = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.16-triton-public" }
-solana-transaction-context = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.16-triton-public" }
+agave-geyser-plugin-interface = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.20-triton-public" }
+solana-account-decoder = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.20-triton-public" }
+solana-storage-proto = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.20-triton-public" }
+solana-transaction-status = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.20-triton-public" }
+solana-transaction-context = { git = "https://github.com/rpcpool/solana-public.git", tag = "v2.2.20-triton-public" }

@@ -77,10 +77,10 @@ dependencies = [
 
 [[package]]
 name = "agave-feature-set"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
- "ahash",
+ "ahash 0.8.12",
  "solana-epoch-schedule",
  "solana-hash",
  "solana-pubkey",
@@ -89,8 +89,8 @@ dependencies = [
 
 [[package]]
 name = "agave-geyser-plugin-interface"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "log",
  "solana-clock",
@@ -102,8 +102,8 @@ dependencies = [
 
 [[package]]
 name = "agave-precompiles"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "agave-feature-set",
  "bincode",
@@ -124,13 +124,24 @@ dependencies = [
 
 [[package]]
 name = "agave-reserved-account-keys"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "agave-feature-set",
  "lazy_static",
  "solana-pubkey",
  "solana-sdk-ids",
+]
+
+[[package]]
+name = "ahash"
+version = "0.7.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "891477e0c6a8957309ee5c45a6368af3ae14bb510732d2684ffa19af310920f9"
+dependencies = [
+ "getrandom 0.2.16",
+ "once_cell",
+ "version_check",
 ]
 
 [[package]]
@@ -457,7 +468,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "115e54d64eb62cdebad391c19efc9dce4981c690c85a33a12199d99bb9546fee"
 dependencies = [
  "borsh-derive 0.10.4",
- "hashbrown 0.13.2",
+ "hashbrown 0.12.3",
 ]
 
 [[package]]
@@ -1170,7 +1181,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cea14ef9355e3beab063703aa9dab15afd25f0667c341310c1e5274bb1d0da18"
 dependencies = [
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -1471,14 +1482,8 @@ name = "hashbrown"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a9ee70c43aaf417c914396645a0fa852624801b24ebb7ae78fe8272889ac888"
-
-[[package]]
-name = "hashbrown"
-version = "0.13.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "43a3c133739dddd0d2990f9a4bdf8eb4b21ef50e4851ca85ab661199821d510e"
 dependencies = [
- "ahash",
+ "ahash 0.7.8",
 ]
 
 [[package]]
@@ -1883,7 +1888,7 @@ checksum = "e04d7f318608d35d4b61ddd75cbdaee86b023ebe2bd5a66ee0915f0bf93095a9"
 dependencies = [
  "hermit-abi 0.5.1",
  "libc",
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2944,7 +2949,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys 0.4.15",
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -2957,7 +2962,7 @@ dependencies = [
  "errno",
  "libc",
  "linux-raw-sys 0.9.4",
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -3253,8 +3258,8 @@ dependencies = [
 
 [[package]]
 name = "solana-account-decoder"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "Inflector",
  "base64 0.22.1",
@@ -3291,8 +3296,8 @@ dependencies = [
 
 [[package]]
 name = "solana-account-decoder-client-types"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "base64 0.22.1",
  "bs58",
@@ -3408,8 +3413,8 @@ checksum = "ac49c4dde3edfa832de1697e9bcdb7c3b3f7cb7a1981b7c62526c8bb6700fb73"
 
 [[package]]
 name = "solana-compute-budget"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "solana-fee-structure",
  "solana-program-entrypoint",
@@ -3417,8 +3422,8 @@ dependencies = [
 
 [[package]]
 name = "solana-config-program"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "bincode",
  "chrono",
@@ -3580,7 +3585,7 @@ version = "2.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "93b93971e289d6425f88e6e3cb6668c4b05df78b3c518c249be55ced8efd6b6d"
 dependencies = [
- "ahash",
+ "ahash 0.8.12",
  "lazy_static",
  "solana-epoch-schedule",
  "solana-hash",
@@ -3764,8 +3769,8 @@ dependencies = [
 
 [[package]]
 name = "solana-log-collector"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "log",
 ]
@@ -3785,8 +3790,8 @@ dependencies = [
 
 [[package]]
 name = "solana-measure"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 
 [[package]]
 name = "solana-message"
@@ -3993,8 +3998,8 @@ dependencies = [
 
 [[package]]
 name = "solana-program-runtime"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "agave-feature-set",
  "agave-precompiles",
@@ -4320,8 +4325,8 @@ dependencies = [
 
 [[package]]
 name = "solana-storage-proto"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "bincode",
  "bs58",
@@ -4407,8 +4412,8 @@ dependencies = [
 
 [[package]]
 name = "solana-timings"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "eager",
  "enum-iterator",
@@ -4442,8 +4447,8 @@ dependencies = [
 
 [[package]]
 name = "solana-transaction-context"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "bincode",
  "serde",
@@ -4453,7 +4458,6 @@ dependencies = [
  "solana-instructions-sysvar",
  "solana-pubkey",
  "solana-rent",
- "solana-signature",
 ]
 
 [[package]]
@@ -4470,8 +4474,8 @@ dependencies = [
 
 [[package]]
 name = "solana-transaction-status"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "Inflector",
  "agave-reserved-account-keys",
@@ -4511,8 +4515,8 @@ dependencies = [
 
 [[package]]
 name = "solana-transaction-status-client-types"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "base64 0.22.1",
  "bincode",
@@ -4533,8 +4537,8 @@ dependencies = [
 
 [[package]]
 name = "solana-type-overrides"
-version = "2.2.16"
-source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.16-triton-public#c0bfc59d6fcd2f9ad43bdc14fee3966364c41d4b"
+version = "2.2.20"
+source = "git+https://github.com/rpcpool/solana-public.git?tag=v2.2.20-triton-public#357fdb33b5020b3bf801944d759600fbf5f14138"
 dependencies = [
  "lazy_static",
  "rand 0.8.5",
@@ -5296,7 +5300,7 @@ dependencies = [
  "getrandom 0.3.3",
  "once_cell",
  "rustix 1.0.7",
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
@@ -5956,7 +5960,7 @@ version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cf221c93e13a30d793f7645a0e7762c55d169dbb0a49671918a2319d289b10bb"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.52.0",
 ]
 
 [[package]]
